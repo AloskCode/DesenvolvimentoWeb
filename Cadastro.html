@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Cadastro.css">
+    <link rel="stylesheet" href="landingpagegenshin.css">
+    <title>Cadastre-se</title>
+</head>
+<body>
+    <div id="cabeçalho">
+        <a href="landingpagegenshin.html"><img src="Imagens/Genshin-Impact-Logo.png" id="logo"></a>
+
+    <div id="posição">
+            <a href="landingpagegenshin.html" class="linktopo" >Home</a>
+            <a href="landingpagegenshin.html#Sobre" class="linktopo">Sobre</a>
+            <a href="landingpagegenshin.html#Novidades" class="linktopo">Novidades</a>
+            <a href="landingpagegenshin.htmlCadastro.html" class="linktopo">Cadastre-se</a>
+    </div>
+    </div>
+
+    <div id="fundo">
+        <div id="Cadastro">
+            <form id="Cadastrar">
+                <label for="txtNome"></label><br>
+                <input type="text" id="txtNome" name="txtNome" placeholder="Nome"><br>
+                <span id="error-nome" class="textovermelho">Espaço me branco</span><br>
+                <label for="txtEmail"></label><br>
+                <input type="text" id="txtEmail" name="txtEmail" placeholder="Email"><br>
+                <span id="error-email" class="textovermelho">Espaço em branco</span><br>
+                <label for="txtSenha"></label><br>
+                <input type="password" id="txtSenha" name="txtSenha" placeholder="Senha"><br>
+                <span id="error-senha" class="textovermelho">Espaço em branco</span><br>
+    
+                <button type="button" onclick="cadastraUser()" id="button">Cadastrar</button><br>
+            </form>
+        </div>
+    </div>
+
+<script>
+
+function cadastraUser() {
+       
+
+    var nome = document.getElementById("txtNome").value;
+    var email = document.getElementById("txtEmail").value;
+    var senha = document.getElementById("txtSenha").value;
+
+        if (nome.length === 0) {
+                document.getElementById("error-nome").style.display = "block";
+            } else {
+                document.getElementById("error-nome").style.display = "none";
+            }
+        if (email.length === 0) {
+                document.getElementById("error-email").style.display = "block";
+            } else {
+                document.getElementById("error-email").style.display = "none";
+            }
+        if (senha.length === 0) {
+                document.getElementById("error-senha").style.display = "block";
+            } else {
+                document.getElementById("error-senha").style.display = "none";
+            }
+        if (nome.length > 0 && email.length > 0 && senha.length > 0) {
+                alert("Cadastro concluido")
+            }
+         
+            
+}
+
+
+</script>
+
+
+</html>
